@@ -1,5 +1,6 @@
 # vue-front
-
+## Cal component, Cal view  
+view 실습용 싱글 컴포넌트  
 ## Project setup
 ```
 npm install

@@ -11,12 +11,11 @@ export default {
   },
   data(){
     console.log("Cal data");
-    return{}
+    return{//변수 정의하는 부분
+      aaa:"한조2"
+    }
   },
   mounted(){
-    console.log("mounted");
-    
-    this.aaa = "한조"
   },
 }
 </script>

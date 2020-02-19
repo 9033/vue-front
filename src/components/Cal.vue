@@ -17,17 +17,26 @@ export default {
   name: 'Cal',
   props:{
     myname:{
-      // type:String,
+      type:String,//받은 데이터의 타입을 확인. (없어도 실행됨.)
     },
   },
+  created:()=>{
+    console.log('cal cal created');//실행되는 순서: data -> created -> mounted
+  },
   mounted(){
-    console.log(this.myname)
+    console.log('cal cal mounted');//실행되는 순서: data -> created -> mounted
+    // console.log(this.myname)//전달받은 myname을 확인해봄.
   },
   data(){
-    console.log("Cal Cal  data");
+    console.log("Cal Cal data");//실행되는 순서: data -> created -> mounted
+    console.log(this.myname)//전달받은 myname을 확인해봄.
     return {}
   },
+  beforeCreate:function(){
+    console.log("Cal Cal beforeCreate");//실행되는 순서: beforeCreate -> data
+  },
   computed: {
+    // cnt:this.$store.state.count,//$store를 못읽는다고 함.
     count () {
       return this.$store.state.count
     }
