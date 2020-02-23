@@ -21,15 +21,18 @@ const routes = [
   {
     path: '/cal',
     name: 'Cal',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Cal.vue')
+    component: () => import('../views/Cal.vue')
+  },
+  {
+    path: '/table',
+    name: 'Table',
+    component: () => import('../views/Table.vue')
   },
 ]
 
-const router = new VueRouter({
+let router = new VueRouter({
   routes
 })
+router.routes=routes;//router목록도 같이 내보내서 동적으로 메뉴를 만들게함.
 
 export default router

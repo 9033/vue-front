@@ -1,15 +1,27 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-      <br>
-      <router-link to="/cal">Cal</router-link>
+      <p v-for="(r,i) in routes" :key="i">
+        <!-- router-link의 속성을 to에서 :to로 바꾼다. -->
+        <router-link :to="r.path">{{ r.name}}</router-link>
+      </p>
     </div>
     <router-view/>
   </div>
 </template>
 
+
+<script>
+import Route from './router'//라우팅 목록 받기.
+
+export default {
+    data (){
+      return {
+        routes:Route.routes,
+      }
+    },  
+}
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
