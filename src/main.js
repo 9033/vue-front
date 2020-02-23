@@ -5,8 +5,7 @@ import router from './router'
 import store from './store'
 
 //antdv에서 사용할 컴포넌트를 지정.
-import Button from 'ant-design-vue/lib/button';
-import Table from 'ant-design-vue/lib/table';
+import {Table, Button} from 'ant-design-vue/lib';
 Vue.component(Button.name, Button);
 Vue.component(Table.name, Table);
 

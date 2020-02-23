@@ -11,7 +11,10 @@
 </template>
 
 <script>
-
+/*
+여기서 파일을 나눈다면 데이터를 가지고 오는 컴포넌트와
+가지고 온 데이터를 그리는 컴포넌트로 나눌 수 있겠다.
+*/ 
 const sampleData=[];//db-api서버에서 오는 데이터 셈플.
 sampleData.push({id:1,name:"apple",color:"red"});
 sampleData.push({id:2,name:"banana",color:"yellow"});
