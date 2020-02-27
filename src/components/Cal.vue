@@ -3,8 +3,8 @@
   <p>{{ myname }}</p>
   <p>{{ count }}</p>
   <p>
-    <button @click="increment">+</button>
-    <button @click="decrement">-</button>
+    <a-button @click="increment">+</a-button>
+    <a-button @click="decrement">-</a-button>
   </p>    
 </div>
 </template>
