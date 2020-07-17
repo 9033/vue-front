@@ -33,6 +33,11 @@ const routes = [
     name: 'Sw',
     component: () => import('../views/Soulworker.vue')
   },
+  {
+    path: '/css-ani',
+    name: 'CssAni',
+    component: () => import('../views/CssAni.vue')
+  },
 ]
 
 let router = new VueRouter({
