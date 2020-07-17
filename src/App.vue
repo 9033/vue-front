@@ -1,11 +1,11 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <p v-for="(r,i) in routes" :key="i">
-        <!-- router-link의 속성을 to에서 :to로 바꾼다. -->
+    <a-menu mode="horizontal" @click="menuClick">
+      <a-menu-item v-for="r in routes" :key="r.name">
         <router-link :to="r.path">{{ r.name}}</router-link>
-      </p>
-    </div>
+      </a-menu-item>
+    </a-menu>
+    <br/>
     <router-view/>
   </div>
 </template>
