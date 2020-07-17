@@ -43,4 +43,16 @@ export default {
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+
+.center {
+  /* horizon center */
+  margin-left: auto;
+  margin-right: auto;
+}
+.vertical_center{
+  /* vertical center */
+  margin-top: 50%;
+  transform: translate(0, -50%);
+}
+
 </style>
