@@ -38,6 +38,11 @@ const routes = [
     name: 'CssAni',
     component: () => import('../views/CssAni.vue')
   },
+  {
+    path: '/transition-and-animation',
+    name: 'TransitionAndAnimation',
+    component: () => import('../views/TransitionAndAnimation.vue')
+  },
 ]
 
 let router = new VueRouter({
