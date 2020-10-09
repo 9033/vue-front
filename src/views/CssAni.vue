@@ -1,8 +1,8 @@
 <template>
   <main>
     BPM: <a-input-number v-model="bpm" :min="1" /> <a-input style="width: 50px" :maxLength="2" v-model="obj" />
-    <div class="css_ani center">
-      <p class="obj vertical_center" :style="ani">{{obj}}</p>
+    <div class="css_ani center vertical_center">
+      <p class="obj" :style="ani">{{obj}}</p>
       <!-- <p>클라우드</p> -->
     </div>
   </main>
@@ -33,6 +33,8 @@ export default {
   height: 500px;
 }
 .obj{
+  margin-top: 0;
+  margin-bottom: 0;
   animation: mymove 1s infinite;
 }
 @keyframes mymove{

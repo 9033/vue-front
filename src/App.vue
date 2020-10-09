@@ -51,8 +51,9 @@ export default {
 }
 .vertical_center{
   /* vertical center */
-  margin-top: 50%;
-  transform: translate(0, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 </style>
