@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <a-menu mode="horizontal" @click="menuClick">
+    <a-menu mode="horizontal">
       <a-menu-item v-for="r in routes" :key="r.name">
         <router-link :to="r.path">{{ r.name}}</router-link>
       </a-menu-item>
