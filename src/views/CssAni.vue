@@ -25,12 +25,12 @@ export default {
 
       this.clickedTime.push(now_ms)
 
-      this.$nextTick(()=>{ // reset fadeout
-        this.clearClickedTime.set(()=>{
+      this.$nextTick(()=>{
+        this.clearClickedTime.set(()=>{ // reset after 3000ms
           this.clickedTime = []
         }, 3000)
         const clicked = document.querySelectorAll('.clicked')
-        for(let c of clicked){
+        for(let c of clicked){ // reset fadeout animation
           c.classList.remove("clicked");
           void c.offsetWidth; // must do this
           c.classList.add("clicked");
