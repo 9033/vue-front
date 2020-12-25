@@ -43,6 +43,11 @@ const routes = [
     name: 'TransitionAndAnimation',
     component: () => import('../views/TransitionAndAnimation.vue')
   },
+  {
+    path: '/message-button',
+    name: 'MessageButton',
+    component: () => import('../views/MessageButton.vue')
+  },
 ]
 
 let router = new VueRouter({
