@@ -29,3 +29,12 @@ export class Interval {
     this.interval = setInterval(fn, t)
   }
 }
+
+Function.prototype.wait = function(ms, ...args){
+  const _this = this
+  return new Promise((resolve) => {
+    setTimeout(function(){
+      resolve(_this(...args))
+    }, ms, ...args);
+  });
+}
