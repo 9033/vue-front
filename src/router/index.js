@@ -48,6 +48,11 @@ const routes = [
     name: 'MessageButton',
     component: () => import('../views/MessageButton.vue')
   },
+  {
+    path: '/sync-values',
+    name: 'sync input values',
+    component: () => import('../views/SyncValues.vue')
+  },
 ]
 
 let router = new VueRouter({
