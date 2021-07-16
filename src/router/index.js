@@ -53,6 +53,16 @@ const routes = [
     name: 'sync input values',
     component: () => import('../views/SyncValues.vue')
   },
+  {
+    path: '/inline-template',
+    name: 'inline template',
+    component: () => import('../views/Component.vue')
+  },
+  {
+    path: '/dynamic-component',
+    name: 'dynamic-component',
+    component: () => import('../views/DataView.vue')
+  },
 ]
 
 let router = new VueRouter({
