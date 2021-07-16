@@ -2,7 +2,6 @@
   <main>
     <viewer
       :is="viewer"
-      v-if="viewer && data"
     />
   </main>
 </template>
@@ -13,23 +12,24 @@ export default {
   // name: '',
   mixins: [],
   components: {
-    // viewer: null,
+
   },
   data () {
     return {
-      viewer: null,
+
     }
   },
   model: {},
   props: ['data'],
   computed: {
-    getComponent(){
+    viewer(){
       if(typeof this.data === 'function'){
         return () => import(`./type/function.vue`)
       } else if(Array.isArray(this.data)){
         return () => import(`./type/array.vue`)
+      } else {
+        return () => import(`./type/undefined.vue`)  
       }
-      return null
     }
   },
   methods: {
@@ -42,14 +42,7 @@ export default {
 
   },
   mounted () {
-    // this.viewer = () => import(`./type/undefined.vue`)
-    this.getComponent()
-    .then(()=>{
-      this.viewer = () => this.getComponent()
-    })
-    .catch(()=>{
-      this.viewer = () => import(`./type/undefined.vue`)
-    })
+
   },
   beforeDestroy () {
 
