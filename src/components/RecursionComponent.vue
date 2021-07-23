@@ -1,8 +1,10 @@
 <template>
   <main>
-    <YourComponent
-      :title="title"
-    />
+    <div>
+      <YourComponent
+        :title="title"
+      />
+    </div>
   </main>
 </template>
 
@@ -18,15 +20,25 @@ export default {
       render(h){
         let t = []
         for(let _t of this.title){
-          t.push(<p>{_t.name}</p>)
+          t.push(
+            <li>
+              {_t.name}
+            </li>
+          )
           if(Array.isArray(_t.title)){
-            t.push(<YourComponent title={_t.title}></YourComponent>)
+            t.push(
+              <li>
+                <YourComponent
+                  title={_t.title}
+                ></YourComponent>
+              </li>
+            )
           }
         }
         return (
-          <main>
+          <ul>
             { t }
-          </main>
+          </ul>
         )
       }
     },
@@ -92,5 +104,11 @@ export default {
 </script>
 
 <style scoped>
-
+main {
+  display: flex;
+  justify-content: center;
+}
+div {
+  text-align: left;
+}
 </style>
