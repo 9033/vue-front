@@ -17,6 +17,10 @@
     <OurComponent
       title="가짜 our"
     />
+    <a-divider/>
+    <YourComponent
+      title="가짜 your"
+    />
   </main>
 </template>
 
@@ -35,6 +39,20 @@ export default {
   mixins: [],
   components: {
     OurComponent,
+    YourComponent: {
+      props: ['title'],
+      render(h){
+        return (
+          <main>
+            <p>진짜? { this.title }</p>
+            <p>가짜?</p>
+            <a-input
+              value={this.title}
+            />
+          </main>
+        )
+      }
+    },
   },
   data () {
     return {
