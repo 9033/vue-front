@@ -63,6 +63,11 @@ const routes = [
     name: 'dynamic-component',
     component: () => import('../views/DataView.vue')
   },
+  {
+    path: '/recursion-component',
+    name: 'recursion-component',
+    component: () => import('@/views/Component-2.vue')
+  },
 ]
 
 let router = new VueRouter({
