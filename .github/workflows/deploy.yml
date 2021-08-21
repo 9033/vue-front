@@ -21,6 +21,10 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ap-northeast-2
 
+    # update npm selected version. support lockfileversion@2
+    - name: npm 7
+      run: sudo npm i -g npm@">=7.21"
+
     - name: Copy files to the test website with the AWS CLI
       run: |
         npm i
