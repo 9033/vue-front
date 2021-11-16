@@ -68,6 +68,11 @@ const routes = [
     name: 'recursion-component',
     component: () => import('@/views/Component-2.vue')
   },
+  {
+    path: '/top-scroll-bar',
+    name: 'top-scroll-bar',
+    component: () => import('@/views/TopScrollBar.vue')
+  },
 ]
 
 let router = new VueRouter({
