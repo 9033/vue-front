@@ -1,8 +1,13 @@
 <template>
   <main>
-    <!-- Input <code>{{data}}</code> -->
-    <label for="text-input">{{label}}</label>
-    <a-input id="text-input" class="input-box" v-model="draft"></a-input>
+    <p>여러 입력 칸</p>
+    <!-- <pre>{{JSON.stringify(data, null, 2)}}</pre> -->
+    <span v-for="col in cols" :key="col">
+      <Input
+        :label="col"
+        v-model="draft[col]"
+      />
+    </span>
   </main>
 </template>
 
@@ -12,7 +17,7 @@ export default {
   // name: '',
   mixins: [],
   components: {
-
+    Input: () => import(`@/components/depth/Input.vue`)
   },
   data () {
     return {
@@ -23,7 +28,7 @@ export default {
     prop: 'data',
     event: 'change',
   },
-  props: ['data', 'label'],
+  props: ['data', 'cols'],
   computed: {
     draft: {
       get(){
@@ -53,7 +58,5 @@ export default {
 </script>
 
 <style scoped>
-.input-box{
-  width: 512px;
-}
+
 </style>
