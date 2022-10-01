@@ -73,6 +73,11 @@ const routes = [
     name: 'top-scroll-bar',
     component: () => import('@/views/TopScrollBar.vue')
   },
+  {
+    path: '/depth-components',
+    name: 'depth-components',
+    component: () => import('@/views/DepthComponents.vue')
+  },
 ]
 
 let router = new VueRouter({
